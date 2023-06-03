@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="428.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.CheckOutController">
+   <children>
+      <Pane layoutX="559.0" prefHeight="428.0" prefWidth="241.0" style="-fx-background-color: #630c0c;">
+         <children>
+            <ImageView fitHeight="227.0" fitWidth="241.0" layoutX="7.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/img.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="186.0" layoutY="14.0" maxHeight="39.0" maxWidth="42.0" mnemonicParsing="false" onAction="#BackButtton" prefHeight="39.0" prefWidth="39.0" style="-fx-background-color: #630b0b; -fx-border-radius: 50px; -fx-border-color: white; -fx-background-radius: 5em; -fx-min-height: 3px; -fx-min-width: 3px; -fx-max-height: 40px; -fx-max-width: 40px; -fx-cursor: hand;" text="&lt;-" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="8.0" layoutY="6.0" maxHeight="39.0" maxWidth="42.0" mnemonicParsing="false" onAction="#BackButtton" prefHeight="39.0" prefWidth="39.0" style="-fx-background-color: white; -fx-border-radius: 50px; -fx-border-color: #630b0b; -fx-background-radius: 5em; -fx-min-height: 3px; -fx-min-width: 3px; -fx-max-height: 40px; -fx-max-width: 40px; -fx-cursor: hand;" text="&lt;-" textFill="#630b0b">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="82.0" layoutY="14.0" prefHeight="333.0" prefWidth="303.0" style="-fx-border-color: #630c0c;">
+         <children>
+            <Label fx:id="Check" alignment="TOP_LEFT" layoutX="-2.0" lineSpacing="1.0" prefHeight="303.0" prefWidth="307.0">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="13.0" layoutY="297.0" prefHeight="26.0" prefWidth="135.0" text="Payment method" textFill="#630c0c">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="CreditRadio" layoutX="228.0" layoutY="302.0" mnemonicParsing="false" onAction="#CreditClicked" text="Credit">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Pmethod" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="CashRadio" layoutX="163.0" layoutY="302.0" mnemonicParsing="false" onAction="#CashClicked" text="Cash" toggleGroup="$Pmethod" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Creditpn" layoutX="385.0" layoutY="214.0" prefHeight="199.0" prefWidth="173.0">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="101.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/2629972_card_cash_checkout_credit_mastercard_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="69.0" layoutX="21.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/2629973_card_cash_checkout_credit_visa_icon.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="CredirCard" layoutX="14.0" layoutY="100.0" />
+            <Text fx:id="text" layoutX="21.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter credit card number" wrappingWidth="131.572265625" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="CheckoutButton" alignment="CENTER" layoutX="168.0" layoutY="362.0" mnemonicParsing="false" onAction="#OnCheckOutClicked" prefHeight="52.0" prefWidth="205.0" style="-fx-cursor: hand;" stylesheets="@style.css" text="   Checkout" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="182.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/4229517_card_checkout_credit_order_order_checkout_icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

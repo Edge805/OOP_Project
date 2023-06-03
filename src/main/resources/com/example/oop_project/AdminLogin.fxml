@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="420.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.AdminLoginController">
+    <children>
+        <AnchorPane layoutX="372.0" layoutY="3.0" minHeight="0.0" minWidth="0.0" prefHeight="428.0" prefWidth="428.0">
+            <children>
+                <ImageView fitHeight="431.0" fitWidth="436.0" layoutX="-8.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
+                    <image>
+                        <Image url="@../../../img/img.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="3.0" minHeight="0.0" minWidth="0.0" prefHeight="428.0" prefWidth="369.0" style="-fx-background-color: white;">
+            <children>
+                <Button fx:id="AdminSigninButton" layoutX="127.0" layoutY="308.0" mnemonicParsing="false" onAction="#SignInButtonClick" prefHeight="39.0" prefWidth="112.0" text="Sign in" />
+                <Label fx:id="welcomeText" layoutX="81.0" layoutY="43.0" text="Welcome" textAlignment="CENTER" textFill="#630c0c">
+                    <font>
+                        <Font name="System Bold" size="40.0" />
+                    </font>
+                </Label>
+                <Label layoutX="22.0" layoutY="162.0" prefHeight="26.0" prefWidth="97.0" text="User Name" textFill="#630c0c">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+                <Label layoutX="22.0" layoutY="238.0" text="Password" textFill="#630c0c">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="AdminName" layoutX="161.0" layoutY="162.0" prefHeight="26.0" prefWidth="158.0" promptText="Name" />
+            <PasswordField fx:id="AdminPassword" layoutX="157.0" layoutY="239.0" prefHeight="26.0" prefWidth="158.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

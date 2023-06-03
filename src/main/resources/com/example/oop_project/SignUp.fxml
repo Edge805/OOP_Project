@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="428.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.SignUpController">
+   <children>
+      <TextField fx:id="UserNameInput" layoutX="509.0" layoutY="92.0" />
+      <Pane layoutX="14.0" layoutY="16.0" prefHeight="428.0" prefWidth="241.0" style="-fx-background-color: #630c0c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="154.0" layoutY="251.0" text="سجل" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="299.0" text="وحصرفك" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="41.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="240.0" fitWidth="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/img.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="323.0" layoutY="92.0" prefHeight="26.0" prefWidth="97.0" text="User Name" textFill="#630c0c">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="323.0" layoutY="148.0" text="Password" textFill="#630c0c">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="323.0" layoutY="201.0" text="Address" textFill="#630c0c">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="PasswordInput" layoutX="509.0" layoutY="148.0" />
+      <TextField fx:id="AddressInput" layoutX="509.0" layoutY="203.0" />
+      <Label layoutX="323.0" layoutY="260.0" text="Email" textFill="#630c0c">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="PhoneInput" layoutX="509.0" layoutY="310.0" />
+      <Button layoutX="445.0" layoutY="357.0" mnemonicParsing="false" onAction="#SignUpButtonClick" prefHeight="26.0" prefWidth="64.0" text="Sign Up" />
+      <Label layoutX="323.0" layoutY="310.0" text="Phone Number" textFill="#630c0c">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="EmailInput" layoutX="509.0" layoutY="260.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.AdminController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="803.0" style="-fx-background-color: #630b0b;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-51.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="BOTTOM_RIGHT" prefHeight="44.0" prefWidth="136.0" text="Sarfny " textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Sylfaen" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutY="79.0" prefHeight="384.0" prefWidth="144.0" style="-fx-background-color: #630c0c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="44.0">
+         <children>
+            <Button fx:id="AddVendors" mnemonicParsing="false" onAction="#handelClicks" prefHeight="53.0" prefWidth="144.0" stylesheets="@style.css" text="Add Vendors" textFill="WHITE" />
+            <Button fx:id="AddGroceries" mnemonicParsing="false" onAction="#handelClicks" prefHeight="53.0" prefWidth="144.0" stylesheets="@style.css" text="Add Groceries" textFill="WHITE" />
+            <Button fx:id="ShowStatistics" mnemonicParsing="false" onAction="#handelClicks" prefHeight="53.0" prefWidth="144.0" stylesheets="@style.css" text="Show Statistics" textFill="WHITE" />
+            <Button fx:id="ShowUsers" mnemonicParsing="false" onAction="#handelClicks" prefHeight="53.0" prefWidth="144.0" stylesheets="@style.css" text="Show Users" textFill="WHITE" />
+            <Button fx:id="ShowVendors" mnemonicParsing="false" onAction="#handelClicks" prefHeight="53.0" prefWidth="144.0" stylesheets="@style.css" text="Show Vendors" textFill="WHITE" />
+            <Button fx:id="ShowGrocery" mnemonicParsing="false" onAction="#handelClicks" prefHeight="53.0" prefWidth="144.0" stylesheets="@style.css" text="Show Grocery Items" textFill="WHITE" />
+            <Button fx:id="ShowRevenue" mnemonicParsing="false" onAction="#handelClicks" prefHeight="53.0" prefWidth="144.0" stylesheets="@style.css" text="Show Total Revenue" textFill="WHITE" />
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="44.0" prefWidth="144.0" />
+      <StackPane layoutX="144.0" layoutY="44.0" prefHeight="384.0" prefWidth="657.0">
+         <children>
+            <Pane fx:id="ShowStatisticspn" prefHeight="384.0" prefWidth="581.0" style="-fx-background-color: white;" />
+            <Pane fx:id="ShowRevenuepn" prefHeight="384.0" prefWidth="581.0" style="-fx-background-color: white;" />
+            <Pane fx:id="ShowRevenuepn1" prefHeight="392.0" prefWidth="679.0" style="-fx-background-color: white;" />
+            <Pane fx:id="ShowGrocerypn" prefHeight="384.0" prefWidth="581.0" style="-fx-background-color: white;">
+               <children>
+                  <TreeTableView layoutX="-6.0" layoutY="-7.0" prefHeight="391.0" prefWidth="662.0">
+                    <columns>
+                      <TreeTableColumn prefWidth="81.0" text="Item" />
+                      <TreeTableColumn minWidth="0.0" prefWidth="89.0" text="Caregory" />
+                        <TreeTableColumn prefWidth="79.0" text="Quantity" />
+                        <TreeTableColumn prefWidth="94.0" text="Vender" />
+                        <TreeTableColumn prefWidth="69.0" text="Price" />
+                        <TreeTableColumn prefWidth="130.0" text=" Manufacturing date" />
+                        <TreeTableColumn prefWidth="113.0" text="Expiration date" />
+                    </columns>
+                  </TreeTableView>
+               </children>
+            </Pane>
+            <Pane fx:id="AddVendorspn" prefHeight="384.0" prefWidth="581.0" style="-fx-background-color: white;">
+               <children>
+                  <Button layoutX="245.0" layoutY="309.0" mnemonicParsing="false" onAction="#AddVendorsClick" prefHeight="32.0" prefWidth="99.0" text="Add" />
+                  <TextField fx:id="VendorName" layoutX="276.0" layoutY="89.0" prefHeight="25.0" prefWidth="217.0" promptText="Vendor's Name" />
+                  <Label layoutX="129.0" layoutY="88.0" prefHeight="26.0" prefWidth="97.0" text="Name" textFill="#630c0c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="129.0" layoutY="169.0" prefHeight="26.0" prefWidth="97.0" text="Location" textFill="#630c0c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="LocationVendor" layoutX="276.0" layoutY="169.0" prefHeight="25.0" prefWidth="217.0" promptText="Location" />
+                  <Label layoutX="129.0" layoutY="246.0" prefHeight="26.0" prefWidth="119.0" text="Phone number" textFill="#630c0c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="PhoneNumberVendor" layoutX="276.0" layoutY="246.0" prefHeight="25.0" prefWidth="217.0" promptText="Phone Number" />
+               </children>
+            </Pane>
+            <Pane fx:id="AddGroceriespn" prefHeight="384.0" prefWidth="636.0" style="-fx-background-color: white;">
+               <children>
+                  <TextField fx:id="Name" layoutX="233.0" layoutY="39.0" />
+                  <Label layoutX="53.0" layoutY="38.0" prefHeight="26.0" prefWidth="97.0" text="Name" textFill="#630c0c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="87.0" prefHeight="26.0" prefWidth="97.0" text="Category" textFill="#630c0c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="Category" layoutX="232.0" layoutY="88.0" prefWidth="150.0" />
+                  <Label layoutX="53.0" layoutY="135.0" prefHeight="26.0" prefWidth="97.0" text="Vendor" textFill="#630c0c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="179.0" prefHeight="26.0" prefWidth="166.0" text="Manufacturing date" textFill="#630c0c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="228.0" prefHeight="26.0" prefWidth="166.0" text="Expiration date" textFill="#630c0c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Vendor" layoutX="233.0" layoutY="136.0" />
+                  <Label layoutX="53.0" layoutY="279.0" prefHeight="26.0" prefWidth="166.0" text="Quantity" textFill="#630c0c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Quantity" layoutX="233.0" layoutY="280.0" />
+                  <Label layoutX="53.0" layoutY="319.0" prefHeight="26.0" prefWidth="166.0" text="Organic" textFill="#630c0c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="OrganicYes" layoutX="233.0" layoutY="324.0" mnemonicParsing="false" text="Yes ">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="yesno" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="OrganicNo" layoutX="344.0" layoutY="324.0" mnemonicParsing="false" text="No" toggleGroup="$yesno" />
+                  <Button fx:id="Add" layoutX="461.0" layoutY="175.0" mnemonicParsing="false" onAction="#AddGroceries" prefHeight="61.0" prefWidth="119.0" text="Add" />
+                  <DatePicker fx:id="ManfacturingDate" layoutX="229.0" layoutY="180.0" prefHeight="25.0" prefWidth="156.0" />
+                  <DatePicker fx:id="EpirationDate" layoutX="229.0" layoutY="229.0" prefHeight="25.0" prefWidth="156.0" />
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </Pane>
+            <Pane fx:id="ShowUserspn" prefHeight="384.0" prefWidth="581.0" style="-fx-background-color: white;">
+               <children>
+                  <TableView fx:id="UserTable" layoutX="-3.0" layoutY="-6.0" prefHeight="384.0" prefWidth="662.0">
+                    <columns>
+                      <TableColumn fx:id="UserName" prefWidth="75.0" text="UserName" />
+                      <TableColumn fx:id="Email" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="PhoneNumber" prefWidth="185.5999755859375" text="PhoneNumber" />
+                        <TableColumn fx:id="Password" prefWidth="164.79998779296875" text="Password" />
+                        <TableColumn fx:id="Address" prefWidth="161.5999755859375" text="Address" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="ShowVendorspn" prefHeight="384.0" prefWidth="581.0" style="-fx-background-color: white;">
+               <children>
+                  <TableView fx:id="VendorTable" layoutX="-7.0" layoutY="-7.0" prefHeight="391.0" prefWidth="671.0">
+                    <columns>
+                      <TableColumn fx:id="VendorNameColumn" prefWidth="114.4000244140625" text="Name" />
+                      <TableColumn fx:id="VendorLocationColumn" prefWidth="176.0" text="Location" />
+                        <TableColumn fx:id="VendorPhoneColumn" prefWidth="169.5999755859375" text="Telephone_Number" />
+                        <TableColumn fx:id="VendorTrustColumn" prefWidth="207.199951171875" text="Rating" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
