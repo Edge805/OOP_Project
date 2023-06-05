@@ -8,9 +8,15 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -102,9 +108,18 @@ public class UserController implements Initializable {
     @FXML
     private Button BackButton;
 
+    @FXML
+    private Button ChooseImgButton;
+
+    @FXML
+    private ImageView BayzaImg;
+
+    @FXML
+    private Label BayzaOutput;
 
     ShoppingCart shoppingCart = new ShoppingCart();
     ArrayList<Spinner<Integer>> OurSpinners = new ArrayList<Spinner<Integer>>();
+
     @FXML
     void hadelClicks(ActionEvent event) {
         if (event.getSource()==Market){
@@ -217,7 +232,20 @@ public class UserController implements Initializable {
         catch(IOException exception){
             SarafnyOutput.setText("We are sorry the system is currently out of service stay tuned");
         }
+    }
 
+    public void onFileButtonClick() throws FileNotFoundException {
+        Stage stage = new Stage();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Resource File");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"));
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        if (selectedFile != null) {
+            System.out.println(selectedFile.getAbsolutePath());
+            BayzaImg.setImage(new Image(String.valueOf(selectedFile)));
+            BayzaOutput.setText(HeyaBayza.IsHeyaBayza(selectedFile.getPath()));
+        }
     }
 }
 

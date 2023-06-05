@@ -61,20 +61,6 @@
       </VBox>
       <StackPane layoutX="144.0" layoutY="51.0" prefHeight="377.0" prefWidth="657.0">
          <children>
-            <Pane fx:id="Bayzapn" prefHeight="371.0" prefWidth="657.0" style="-fx-background-color: white;">
-               <children>
-                  <AnchorPane layoutX="48.0" layoutY="196.0" prefHeight="152.0" prefWidth="541.0" style="-fx-border-color: #630c0c;">
-                     <children>
-                        <Label fx:id="SarafnyOutput1" layoutX="6.0" layoutY="7.0" prefHeight="152.0" prefWidth="547.0" />
-                     </children>
-                  </AnchorPane>
-                  <TextField layoutX="251.0" layoutY="77.0" prefHeight="25.0" prefWidth="347.0" />
-                  <Label layoutX="48.0" layoutY="79.0" prefHeight="17.0" prefWidth="176.0" text="Enter Desired File Path">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-               </children></Pane>
             <Pane fx:id="Sarafnypn" prefHeight="384.0" prefWidth="581.0" style="-fx-background-color: white;">
                <children>
                   <TextArea fx:id="SarafnyInput" layoutX="154.0" layoutY="58.0" prefHeight="107.0" prefWidth="421.0" promptText="ex: Tomato, carrot, meat" />
@@ -235,6 +221,21 @@
                      </children>
                   </GridPane>
                   <Button fx:id="CheckOutButton" layoutX="220.0" layoutY="305.0" mnemonicParsing="false" onAction="#OnCheckOut" prefHeight="44.0" prefWidth="203.0" text="Proceed to checkout" />
+               </children></Pane>
+            <Pane fx:id="Bayzapn" prefHeight="371.0" prefWidth="657.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="48.0" layoutY="196.0" prefHeight="152.0" prefWidth="541.0" style="-fx-border-color: #630c0c;">
+                     <children>
+                        <Label fx:id="BayzaOutput" layoutX="6.0" layoutY="7.0" prefHeight="152.0" prefWidth="547.0" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="48.0" layoutY="79.0" prefHeight="17.0" prefWidth="176.0" text="Enter Desired File Path">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ChooseImgButton" layoutX="254.0" layoutY="77.0" mnemonicParsing="false" onAction="#onFileButtonClick" text="Click to choose" />
+                  <ImageView fx:id="BayzaImg" fitHeight="165.0" fitWidth="200.0" layoutX="395.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
                </children></Pane>
          </children>
       </StackPane>

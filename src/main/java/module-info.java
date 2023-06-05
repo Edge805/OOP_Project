@@ -4,6 +4,7 @@ module com.example.oop_project {
     requires java.sql;
     requires org.junit.jupiter.api;
     requires junit;
+    requires java.desktop;
 
 
     opens com.example.oop_project to javafx.fxml;

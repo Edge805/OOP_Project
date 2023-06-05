@@ -80,7 +80,6 @@ public class User extends Person{
         preparedStatement.setString(1, UserName);;
         preparedStatement.setDate(2, java.sql.Date.valueOf(LocalDate.now()));
         preparedStatement.executeUpdate();
-
     }
 
 }
